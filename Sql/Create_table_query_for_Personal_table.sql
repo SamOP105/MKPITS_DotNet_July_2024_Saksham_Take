@@ -1,0 +1,2 @@
+create table Personal(id int identity(1,1) , FName varchar(10),MName varchar(10), LName varchar(10),age int, Eid int);
+INSERT INTO Personal (FName, MName, LName, age, Eid) VALUES ('Rohan', 'Kumar', 'Sharma', 28, 1),  ('Priya', 'Raj', 'Verma', 25, 2),     ('Anjali', 'Devi', 'Patel', 30, 3),   ('Amit', 'Singh', 'Gupta', 32, 4),  ('Nikhil', 'Ravi', 'Joshi', 27, 5),   ('Meena', 'Suresh', 'Iyer', 29, 6),     ('Rahul', 'Kiran', 'Desai', 31, 7);     
