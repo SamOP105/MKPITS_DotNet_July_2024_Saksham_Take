@@ -1,0 +1,1 @@
+create table AccountDetails(TransferId int, SAcc bigint,RAcc bigint,BalanceAmt decimal(18,2),TransferAmt decimal(18,2));
