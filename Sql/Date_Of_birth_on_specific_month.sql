@@ -1,0 +1,2 @@
+--12.Select Customers by Birth Month: Write a query to select customers who were
+--born in a specific month using the MONTH function.select ID,FirstName,LastName from Customer where Month(DateofBirth)=1;
