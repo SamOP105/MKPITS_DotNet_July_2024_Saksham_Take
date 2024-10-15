@@ -1,0 +1,1 @@
+--create table customers(CustomerId int identity(1,1) primary key,CustomerName varchar(10),Email varchar(50));
