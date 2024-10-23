@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>University Admission Eligibility</title>
+</head>
+<body>
+    <h2>University Admission Eligibility Checker</h2>
+
+   <label for="examScore">Entrance Exam Score (out of 100): </label>
+    <input id="examScore" type="number" placeholder="Enter your score"/><br><br>
+
+    <label for="academicPerformance">Previous Academic Performance (GPA out of 4.0): </label>
+    <input id="academicPerformance" type="number" placeholder="Enter your GPA" /><br><br>
+
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <script>
+        function checkEligibility() {
+            var examScore = Number(document.getElementById("examScore").value);
+            var academicPerformance = Number(document.getElementById("academicPerformance").value);
+
+           var minExamScore = 70;
+            var minGPA = 3.0;
+
+            var eligibilityMessage = "";
+            if (examScore >= minExamScore && academicPerformance >= minGPA) {
+                eligibilityMessage = "Congratulations! You are eligible for admission.";
+            } else if (examScore >= minExamScore && academicPerformance < minGPA) {
+                eligibilityMessage = "You meet the entrance exam requirement, but your academic performance is below the required GPA.";
+            } else if (examScore < minExamScore && academicPerformance >= minGPA) {
+                eligibilityMessage = "You meet the GPA requirement, but your entrance exam score is below the required level.";
+            } else {
+                eligibilityMessage = "Unfortunately, you do not meet the eligibility criteria for admission.";
+            }
+
+            document.getElementById("result").innerHTML = eligibilityMessage;
+        }
+    </script>
+</body>
+</html>
