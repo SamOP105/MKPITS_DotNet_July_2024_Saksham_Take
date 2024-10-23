@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discount Eligibility</title>
+</head>
+<body>
+    <h2>Check Discount Eligibility</h2>
+    <input id="totalAmount" placeholder="Enter Total Purchase Amount" />
+    <button onclick="checkDiscount()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <script>
+        function checkDiscount() {
+            var totalAmount = document.getElementById("totalAmount").value;
+            totalAmount = Number(totalAmount);
+
+            var discountMessage = "";
+
+            if (totalAmount >= 1000) {
+                discountMessage = "Congratulations! You are eligible for a 20% discount.";
+            } else if (totalAmount >= 500) {
+                discountMessage = "You are eligible for a 10% discount.";
+            } else {
+                discountMessage = "Sorry, you are not eligible for a discount.";
+            }
+
+            document.getElementById("result").innerHTML = discountMessage;
+        }
+    </script>
+</body>
+</html>
