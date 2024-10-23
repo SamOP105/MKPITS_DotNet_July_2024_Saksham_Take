@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Perfect Square Checker</title>
+</head>
+<body>
+    <input id="n1" placeholder="Enter Number" />
+    <button id="btnSubmit" onclick="Calculate()">Evaluate</button>
+    <span id="ss"></span>
+
+    <script>
+        function Calculate() {
+            var number = document.getElementById("n1").value;
+            number = Number(number);
+
+            var isPerfectSquare = false;
+
+            for (var i = 1; i <= number; i++) {
+                if (i * i === number) {
+                    isPerfectSquare = true;
+                    break;
+                }
+            }
+
+            if (isPerfectSquare) {
+                document.getElementById("ss").innerHTML = "Perfect Square";
+            } else {
+                document.getElementById("ss").innerHTML = "Not a Perfect Square";
+            }
+        }
+    </script>
+</body>
+</html>
