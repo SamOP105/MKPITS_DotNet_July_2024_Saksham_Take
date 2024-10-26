@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right-Tilted Number Pyramid Pattern</title>
+</head>
+<body>
+    <h2>Right-Tilted Pyramid Pattern Generator</h2>
+    <label for="rows">Enter the number of rows: </label>
+    <input type="number" id="rows" min="1" required>
+    <br><br>
+    <button onclick="generateRightTiltedNumberPyramid()">Generate Right-Tilted Pyramid</button>
+
+    <h3>Pattern:</h3>
+    <pre id="pattern"></pre>
+
+    <script>
+        function generateRightTiltedNumberPyramid() {
+            const rows = parseInt(document.getElementById("rows").value);
+            if (isNaN(rows) || rows < 1) {
+                document.getElementById("pattern").innerText = "Please enter a valid number of rows.";
+                return;
+            }
+
+            let pattern = "";
+            for (let i = 1; i <= rows; i++) {
+                pattern += " ";
+
+                for (let j = 1; j <= i; j++) {
+                    pattern += j + " ";
+                }
+                pattern += "\n";
+            }
+            document.getElementById("pattern").innerText = pattern;
+        }
+    </script>
+</body>
+</html>
