@@ -12,17 +12,13 @@ int main() {
     cout << "Enter the exponent: ";
     cin >> exponent;
 
-    bool isNegative = (exponent < 0);
-    if (isNegative) {
-        exponent = -exponent;
-    }
+    int positiveExponent = (exponent < 0) ? -exponent : exponent;
 
-    for (int i = 0; i < exponent; i++) {
+    for (int i = 0; i < positiveExponent; i++) {
         result *= base;
     }
 
-    // If the exponent was negative, take the reciprocal
-    if (isNegative) {
+    if (exponent < 0) {
         result = 1.0 / result;
     }
 
